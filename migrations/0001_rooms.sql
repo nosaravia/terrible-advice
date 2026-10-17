@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS rooms (
+  code TEXT PRIMARY KEY,
+  data TEXT NOT NULL,
+  revision INTEGER NOT NULL DEFAULT 0,
+  updated INTEGER NOT NULL
+);
+CREATE INDEX IF NOT EXISTS rooms_updated ON rooms(updated);
